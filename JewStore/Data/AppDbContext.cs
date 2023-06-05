@@ -1,5 +1,7 @@
 ﻿using Microsoft.EntityFrameworkCore;
 using JewStore.Models;
+using System.Reflection.Metadata;
+
 namespace JewStore.Data
 {
 	public class AppDbContext : DbContext
@@ -18,7 +20,9 @@ namespace JewStore.Data
 			modelBuilder.Entity<OrderModel>().ToTable("Orders");
 			modelBuilder.Entity<UserModel>().ToTable("Users");
 			modelBuilder.Entity<FeedbackModel>().ToTable("Feedbacks");
+			modelBuilder.Entity<UserModel>().HasData(new UserModel[] {
+				 new UserModel{UserId=1,Login="admin", PasswordHash="123", Rating=-1, Role="Admin", UserName = "Admin"},
+			 });
 		}
-
 	}
 }

@@ -14,6 +14,7 @@ namespace JewStore.Realizations
 		public ResourceService(ILogger<ResourceService> logger, AppDbContext dbContext)
 		{
 			_dbContext = dbContext;
+			
 			_logger = logger;
 		}
         public async Task<List<OrderModel>> GetAllOrders()
