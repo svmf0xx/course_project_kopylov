@@ -1,0 +1,71 @@
+.body[b-ahfshs1nv4] {
+    max-width: 95%;
+    display: grid;
+    grid-gap: 20px;
+    grid-template-rows: auto;
+    text-align: center;
+    margin: auto;
+}
+textarea[b-ahfshs1nv4]{
+    margin: auto;
+}
+.submit-btn[b-ahfshs1nv4] {
+    width: 50%;
+    margin: auto;
+}
+form[b-ahfshs1nv4]{
+    width: 100%;
+}
+.cancel-buttons[b-ahfshs1nv4]{
+    margin: auto;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    width: 80%;
+    height: 70%;
+}
+.button[b-ahfshs1nv4]{
+    width: 100%;
+    height: 100%;
+}
+.rating-area[b-ahfshs1nv4]{
+    width: auto;
+    margin: auto;
+}
+
+    .rating-area:not(:checked) > label[b-ahfshs1nv4] {
+        float: right;
+        width: 42px;
+        padding: 0;
+        cursor: pointer;
+        font-size: 32px;
+        line-height: 32px;
+        color: lightgrey;
+        text-shadow: 1px 1px #bbb;
+    }
+
+        .rating-area:not(:checked) > label[b-ahfshs1nv4]:before {
+            content: '★';
+        }
+
+    .rating-area > input:checked ~ label[b-ahfshs1nv4] {
+        color: gold;
+        text-shadow: 1px 1px #c60;
+    }
+
+    .rating-area:not(:checked) > label:hover[b-ahfshs1nv4],
+    .rating-area:not(:checked) > label:hover ~ label[b-ahfshs1nv4] {
+        color: gold;
+    }
+
+    .rating-area > input:checked + label:hover[b-ahfshs1nv4],
+    .rating-area > input:checked + label:hover ~ label[b-ahfshs1nv4],
+    .rating-area > input:checked ~ label:hover[b-ahfshs1nv4],
+    .rating-area > input:checked ~ label:hover ~ label[b-ahfshs1nv4],
+    .rating-area > label:hover ~ input:checked ~ label[b-ahfshs1nv4] {
+        color: gold;
+        text-shadow: 1px 1px goldenrod;
+    }
+
+.rate-area > label:active[b-ahfshs1nv4] {
+    position: relative;
+}

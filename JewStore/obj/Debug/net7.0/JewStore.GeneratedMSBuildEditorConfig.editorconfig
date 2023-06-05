@@ -1,0 +1,93 @@
+is_global = true
+build_property.TargetFramework = net7.0
+build_property.TargetPlatformMinVersion = 
+build_property.UsingMicrosoftNETSdkWeb = true
+build_property.ProjectTypeGuids = 
+build_property.InvariantGlobalization = 
+build_property.PlatformNeutralAssembly = 
+build_property.EnforceExtendedAnalyzerRules = 
+build_property._SupportedPlatformList = Linux,macOS,Windows
+build_property.RootNamespace = JewStore
+build_property.RootNamespace = JewStore
+build_property.ProjectDir = C:\Users\samfoxx\Desktop\пуксрач\Jewerly store\JewStore\JewStore\
+build_property.RazorLangVersion = 7.0
+build_property.SupportLocalizedComponentNames = 
+build_property.GenerateRazorMetadataSourceChecksumAttributes = 
+build_property.MSBuildProjectDirectory = C:\Users\samfoxx\Desktop\пуксрач\Jewerly store\JewStore\JewStore
+build_property._RazorSourceGeneratorDebug = 
+
+[C:/Users/samfoxx/Desktop/пуксрач/Jewerly store/JewStore/JewStore/Views/Shared/Error.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXEVycm9yLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/samfoxx/Desktop/пуксрач/Jewerly store/JewStore/JewStore/Views/Shared/_ValidationScriptsPartial.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9WYWxpZGF0aW9uU2NyaXB0c1BhcnRpYWwuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/samfoxx/Desktop/пуксрач/Jewerly store/JewStore/JewStore/Views/_ViewImports.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcX1ZpZXdJbXBvcnRzLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/samfoxx/Desktop/пуксрач/Jewerly store/JewStore/JewStore/Views/_ViewStart.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcX1ZpZXdTdGFydC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/samfoxx/Desktop/пуксрач/Jewerly store/JewStore/JewStore/Views/Home/AdminPage.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxBZG1pblBhZ2UuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = b-a2tq7iwwkk
+
+[C:/Users/samfoxx/Desktop/пуксрач/Jewerly store/JewStore/JewStore/Views/Home/ClientPage.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxDbGllbnRQYWdlLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = b-slsrfa0brm
+
+[C:/Users/samfoxx/Desktop/пуксрач/Jewerly store/JewStore/JewStore/Views/Home/LoginPage.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxMb2dpblBhZ2UuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = b-3s8cwl1phf
+
+[C:/Users/samfoxx/Desktop/пуксрач/Jewerly store/JewStore/JewStore/Views/Home/MasterPage.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxNYXN0ZXJQYWdlLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = b-x5d58qgq6p
+
+[C:/Users/samfoxx/Desktop/пуксрач/Jewerly store/JewStore/JewStore/Views/Home/RegisterPage.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxSZWdpc3RlclBhZ2UuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = b-hvj1opv59v
+
+[C:/Users/samfoxx/Desktop/пуксрач/Jewerly store/JewStore/JewStore/Views/Home/_AdminMastersList.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxfQWRtaW5NYXN0ZXJzTGlzdC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = b-ala3xt8c3m
+
+[C:/Users/samfoxx/Desktop/пуксрач/Jewerly store/JewStore/JewStore/Views/Home/_AdminOrders.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxfQWRtaW5PcmRlcnMuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = b-s5e0dvnes4
+
+[C:/Users/samfoxx/Desktop/пуксрач/Jewerly store/JewStore/JewStore/Views/Home/_AdminRegister.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxfQWRtaW5SZWdpc3Rlci5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = b-fzaw6nfoun
+
+[C:/Users/samfoxx/Desktop/пуксрач/Jewerly store/JewStore/JewStore/Views/Home/_AdminUsers.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxfQWRtaW5Vc2Vycy5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = b-cwgpkwomsh
+
+[C:/Users/samfoxx/Desktop/пуксрач/Jewerly store/JewStore/JewStore/Views/Home/_ClientOrders.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxfQ2xpZW50T3JkZXJzLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = b-egcxo8b1kn
+
+[C:/Users/samfoxx/Desktop/пуксрач/Jewerly store/JewStore/JewStore/Views/Home/_MakeFeedback.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxfTWFrZUZlZWRiYWNrLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = b-ahfshs1nv4
+
+[C:/Users/samfoxx/Desktop/пуксрач/Jewerly store/JewStore/JewStore/Views/Home/_MakeOrder.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxfTWFrZU9yZGVyLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = b-cyooyy7sov
+
+[C:/Users/samfoxx/Desktop/пуксрач/Jewerly store/JewStore/JewStore/Views/Home/_MasterFeedbacks.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxfTWFzdGVyRmVlZGJhY2tzLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = b-889kbf2r6w
+
+[C:/Users/samfoxx/Desktop/пуксрач/Jewerly store/JewStore/JewStore/Views/Home/_MasterOrders.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxfTWFzdGVyT3JkZXJzLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = b-u0oz8sratt
+
+[C:/Users/samfoxx/Desktop/пуксрач/Jewerly store/JewStore/JewStore/Views/Shared/_Layout.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9MYXlvdXQuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = b-5eg2hbo2y8

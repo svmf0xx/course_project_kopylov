@@ -1,0 +1,73 @@
+﻿@using JewStore.Models;
+@using Microsoft.AspNetCore.Mvc;
+@model OrderModel;
+
+    
+    <form method="post" asp-action="AddOrder" asp-controller="Home" class="body">
+        <div class="body">
+            
+            <input asp-for="ClientLogin", type="hidden" value="@Model.ClientLogin"/>
+            <input asp-for="ClientName", type="hidden" value="@Model.ClientName"/>
+            <select asp-for="Type" required>
+                <option value="" disabled selected>Тип изделия...</option>
+                <option>Подвеска</option>
+                <option>Цепочка</option>
+                <option>Кольцо</option>
+                <option>Серьги</option>
+                <option>Браслет</option>
+            </select>
+
+            <select asp-for ="Material" required>
+                <option value="" disabled selected>Материал изделия...</option>
+                <option>Золото</option>
+                <option>Платина</option>
+                <option>Серебро</option>
+                <option>Палладий</option>
+                <option>Иридий</option>
+                <option>Осмий</option>
+            </select>
+
+            <select asp-for="Gem" required>
+                <option value="" disabled selected>Драгоценный камень...</option>
+                <option>Бриллиант</option>
+                <option>Изумруд</option>
+                <option>Рубин</option>
+                <option>Сапфир</option>
+                <option>Лазурит</option>
+                <option>Аметист</option>
+            </select>
+            <textarea asp-for="Comment" value="" placeholder="Комментарий к заказу (необязательно)">
+
+            </textarea>
+
+            <!--More window and BUTTON-->
+                <div class="cancel-button">
+
+                    
+
+                    <div class="modal fade bs-example-modal-lg" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel">
+                        <div class="modal-dialog modal-lg cancel-modal">
+                            <div class="modal-content">
+                                <div class="modal-header cancel-header">
+                                    <h4 class="modal-title" id="myModalLabel">ВЫ УВЕРЕНЫ?</h4>
+                                </div>
+                                <div class="cancel-buttons">
+                                    <button class="btn btn-primary button">Заказать</button>
+                                    <br>
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+        </div>
+    </form>
+<button class="btn btn-primary cancel" data-bs-toggle="modal" data-bs-target=".bs-example-modal-lg">Заказать</button>
+
+
+
+
+
+
+
+

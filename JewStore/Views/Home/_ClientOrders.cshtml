@@ -1,0 +1,161 @@
+﻿@model List<OrderModel>
+
+<div class="body">
+	@if (Model.Any() && Model != null)
+	{
+		<div class="order-table">
+			<div class="field order-type">Тип изделия</div>
+			<div class="field order-date">Дата заказа</div>
+			<div class="field order-date">Камень</div>
+			<div class="field order-date">Статус</div>
+			<div class="field order-date"></div>
+
+		</div>
+		@foreach (var order in Model)
+		{
+			
+			<div class="order">
+				<div class="field order-type">@order.Type</div>
+				<div class="field order-date">@order.Date</div>
+				<div class="field order-date">@order.Gem</div>
+				<div class="field order-date">@order.Status</div>
+
+				<!--More window and BUTTON-->
+				<div class="modal fade" width="100%" id="staticBackdrop-@(order.OrderID)" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+					<div class="modal-dialog">
+						<div class="modal-content">
+							<div class="modal-header">
+								<h5 class="modal-title" id="staticBackdropLabel">Подробности заказа</h5>
+								<button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Закрыть"></button>
+							</div>
+							<div class="modal-body">
+								<!--тут внутренности-->
+
+
+								<div class="more-field master">
+									<div>Мастер</div>
+									<div>@order.MastersName</div>
+								</div>
+								<div class="more-field date-of-order">
+									<div>Когда был заказан</div>
+									<div>@order.Date</div>
+								</div>
+								<div class="more-field price">
+									<div>Цена</div>
+									<div>$@order.Price</div>
+								</div>
+								<div class="more-field price">
+									<div>Драгоценный камень</div>
+									<div>@order.Gem</div>
+								</div>
+								<div class="more-field price">
+									<div>Статус</div>
+									<div>@order.Status</div>
+								</div>
+								<div class="more-field price">
+									<div>Комментарий</div>
+									<div>@order.Comment</div>
+								</div>
+
+
+								<br>
+								<div class="cancel-button">
+
+									@if (order.Status !="Готов") {
+										<button class="btn btn-danger cancel" data-bs-toggle="modal" data-bs-target=".bs-example-modal-lg-@(order.OrderID)">Отказаться</button>
+										<!--модальное окно отказа-->
+										<div class="modal fade bs-example-modal-lg-@(order.OrderID)" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel">
+											<div class="modal-dialog modal-lg cancel-modal">
+												<div class="modal-content">
+													<div class="modal-header cancel-header">
+														<h4 class="modal-title" id="myModalLabel">ВЫ УВЕРЕНЫ?</h4>
+													</div>
+													<div class="cancel-buttons">
+
+														<button class="btn btn-danger button" onclick="location.href='@Url.Action("DeleteOrder", "Home", new {
+																																							OrderId = order.OrderID,
+																																							ClientLogin=order.ClientLogin,
+																																							ClientName=order.ClientName,
+																																							Type = order.Type,
+																																							Material = order.Material,
+																																							Comment = order.Comment,
+																																							Date = order.Date,
+																																							Gem = order.Gem,
+																																							MastersName = order.MastersName,
+																																							Status = order.Status,
+																																							Price = order.Price})' ">
+
+															ДА
+														</button>
+														<button class="btn btn-secondary button" data-bs-dismiss="modal">НЕТ</button>
+													</div>
+
+												</div>
+											</div>
+										</div>
+
+									}
+
+									else
+									{
+										<button class="btn btn-success cancel" data-bs-toggle="modal" data-bs-target=".bs-example-modal-lg-@(order.OrderID)">Оставить Отзыв</button>
+										<!--модальное окно отказа-->
+										<div class="modal fade bs-example-modal-lg-@(order.OrderID)" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel">
+											<div class="modal-dialog modal-lg feedback-modal">
+												<div class="modal-content ">
+													<div class="modal-header cancel-header">
+														<h4 class="modal-title" id="myModalLabel">Оставить Отзыв</h4>
+													</div>
+													<div class="feedback-window">
+
+													</div>
+													<script>
+														var order = {
+																		
+																		ClientName: '@(new Microsoft.AspNetCore.Html.HtmlString(order.ClientName))',
+																		
+																		
+																		FbMasterName: '@(new Microsoft.AspNetCore.Html.HtmlString(order.MastersName))',
+																		OrderId: @order.OrderID,
+																	}
+
+														$(".feedback-window").load("/Home/_MakeFeedback", order)
+													</script>
+												</div>
+											</div>
+										</div>
+
+									}
+
+								</div>
+
+
+							</div>
+							<div class="modal-footer">
+								<button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Закрыть</button>
+
+							</div>
+						</div>
+					</div>
+				</div>
+
+
+
+				<div class="field more-button">
+					<button class="btn btn-primary more-btn" data-bs-toggle="modal" data-bs-target="#staticBackdrop-@(order.OrderID)">Подробнее...</button>
+				</div>
+				<!--More BUTTON END-->
+			</div>
+		}
+
+	}
+	else
+	{
+		<div>
+			Пока заказов нет...
+		</div>
+	}
+
+	<br>
+</div>
+

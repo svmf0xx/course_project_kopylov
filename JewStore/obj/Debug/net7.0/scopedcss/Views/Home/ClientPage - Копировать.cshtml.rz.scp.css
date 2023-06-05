@@ -1,0 +1,17 @@
+.body[b-op3wqoixsk] {
+    display:grid;
+    grid-template-rows: 10% 90%;
+    grid-gap: 100px;
+
+
+
+}
+span[b-op3wqoixsk]{
+    font-family: Helvetica;
+    font-size: 40px;
+    margin:auto;
+    font-weight: bold;
+}
+.welcome[b-op3wqoixsk]{
+    margin:auto;
+}

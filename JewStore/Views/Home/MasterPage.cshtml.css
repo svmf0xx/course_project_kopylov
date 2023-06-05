@@ -1,0 +1,21 @@
+﻿.body {
+    display:grid;
+    grid-template-rows: auto;
+    grid-gap: 100px;
+    
+
+}
+.welcome {
+    font-size: 25px;
+    font-weight: bold;
+    text-align: center;
+}
+span{
+    font-family: Helvetica;
+    font-size: 40px;
+    margin:auto;
+    font-weight: bold;
+}
+.welcome{
+    margin:auto;
+}

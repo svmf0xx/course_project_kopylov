@@ -1,0 +1,85 @@
+﻿.body{
+    margin-top: 10px;
+}
+.more-btn {
+    width: 100%;
+    height: 100%;
+}
+.order {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+    font-size: 20px;
+    border: 1px solid rgb(200, 200, 200);
+    border-radius: 4px 4px 4px 4px;
+    margin-bottom: 4px;
+    justify-content:space-between;
+}
+.order-table {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+    text-align: left;
+    font-size: 20px;
+    margin-bottom: 5px;
+    justify-content: space-between;
+}
+.field{
+    margin: 4px;
+}
+.more-field{
+    display:grid;
+    grid-template-columns:30% 70%;
+    grid-gap: 5px;
+    border-bottom: 1px solid rgb(200, 200, 200);
+    
+}
+.modal-body{
+    font-size: 18px;
+    display:grid;
+    grid-template-rows: auto;
+    grid-gap: 15px;
+}
+.cancel-button{
+    margin:auto;
+    width: 80%;
+}
+.cancel {
+    width:100%;
+}
+
+.cancel-modal {
+    text-align: center;
+    position: absolute;
+    top: 50%;
+    left: 36%;
+    width: 30%;
+    height: 70%;
+}
+
+.cancel-header{
+    text-align:center;
+}
+.cancel-buttons{
+    display: flex;
+    justify-content: space-between;
+    margin: auto;
+    width: 90%;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+.button{
+    width: 40%;
+}
+
+.make-order-modal{
+    margin-top: 10px;
+}
+
+.feedback-modal {
+    text-align: center;
+    position: absolute;
+    top: 33%;
+    left: 31%;
+    width: 40%;
+    height: 70%;
+
+}

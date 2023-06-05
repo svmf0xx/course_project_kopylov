@@ -1,0 +1,72 @@
+﻿@model UserModel;
+@{
+    ViewData["Title"] = "Master Page";
+}
+
+@Html.Hidden("RedirectTo", Url.Action("LoginPage", "Home"))
+
+<div class="body">
+    <div class="welcome">
+            Добрый день, @Model.UserName.<br>
+            Ваш рейтинг - @Model.Rating★.
+    </div>
+
+    <div class="menu">
+        <div class="buttons">
+            <button class="btn btn-success" id="all-orders-button">Мои заказы</button>
+            <button class="btn btn-success" id="all-feedbacks-button">Мои отзывы</button>
+        </div>
+
+        <div id="all-orders">
+        </div>
+    </div>
+</div>
+
+
+
+
+
+
+
+
+    @section Scripts
+        {
+        <script>
+
+
+
+            var check = '@(new Microsoft.AspNetCore.Html.HtmlString(Model.Login))'
+            if (check === '') {
+                var url = $("#RedirectTo").val();
+                location.href = url;
+            }
+
+
+            var model =
+            {
+                UserId: @Model.UserId,
+                Login: '@(new Microsoft.AspNetCore.Html.HtmlString(Model.Login))',
+                UserName: '@(new Microsoft.AspNetCore.Html.HtmlString(Model.UserName))',
+                PasswordHash: '@Model.PasswordHash',
+                Role: '@Model.Role',
+                Rating: '@Model.Rating',
+            }
+
+
+
+            $('#all-orders').load("/Home/_MasterOrders", model)
+
+            $('#all-orders-button').click(function () {
+                      $('#all-orders').load("/Home/_MasterOrders", model)
+            })
+
+            $('#all-feedbacks-button').click(function () {
+                 $('#all-orders').load("/Home/_MasterFeedbacks", model)
+            })
+
+        </script>
+    }
+
+
+
+</div>

@@ -1,0 +1,28 @@
+﻿.body {
+    display:grid;
+    grid-template-rows: 10% 90%;
+    grid-gap: 100px;
+
+}
+span{
+    font-family: Helvetica;
+    font-size: 40px;
+    margin:auto;
+    font-weight: bold;
+}
+.welcome{
+    margin:auto;
+}
+
+.footer{
+    position: absolute;
+    bottom: 20px;
+    right: 20px;
+}
+
+.modal-dialog {
+    position: absolute;
+    bottom: 30px;
+    right: 50px;
+    width: 50%;
+}

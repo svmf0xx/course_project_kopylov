@@ -1,0 +1,30 @@
+﻿@model List<FeedbackModel>
+
+<div class="body">
+	@if (Model.Any() && Model != null)
+	{
+		<div class="order-table">
+			<div class="field order-date">Имя пользователя</div>
+			<div class="field order-type">Комментарий</div>
+			<div class="field order-date">Оценка</div>
+		</div>
+		@foreach (var fb in Model)
+		{
+			<div class="order">
+				<div class="field order-date">@fb.ClientName</div>
+				<div class="field order-type">@fb.FbText</div>
+				<div class="field order-date">@fb.FbScore</div>
+			</div>
+		}
+
+	}
+	else
+	{
+		<div>
+			Пока отзывов нет...
+		</div>
+	}
+
+	<br>
+</div>
+

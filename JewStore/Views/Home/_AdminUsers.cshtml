@@ -1,0 +1,36 @@
+﻿@model List<UserModel>
+
+<div class="body">
+	@if (Model.Any() && Model[0] != null)
+	{
+		<div class="user-table">
+			<div>Имя</div>
+			<div>Роль</div>
+			<div>Рейтинг</div>
+			<div></div>
+		</div>
+		@foreach (var user in Model)
+		{
+				<div class="user">
+					<div>@user.UserName</div>
+					<div>@user.Role</div>
+				@if(user.Rating == -1)
+				{
+					<div>Нет</div>
+				}
+				else
+				{
+					<div>@user.Rating</div>
+				}
+				
+				</div>
+		}
+	}
+	else
+	{
+		<div>
+			Пользователей нет (это как?...)
+		</div>
+	}
+</div>
+

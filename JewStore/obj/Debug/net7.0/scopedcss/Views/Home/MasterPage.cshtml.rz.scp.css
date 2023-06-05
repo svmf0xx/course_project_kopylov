@@ -1,0 +1,21 @@
+.body[b-x5d58qgq6p] {
+    display:grid;
+    grid-template-rows: auto;
+    grid-gap: 100px;
+    
+
+}
+.welcome[b-x5d58qgq6p] {
+    font-size: 25px;
+    font-weight: bold;
+    text-align: center;
+}
+span[b-x5d58qgq6p]{
+    font-family: Helvetica;
+    font-size: 40px;
+    margin:auto;
+    font-weight: bold;
+}
+.welcome[b-x5d58qgq6p]{
+    margin:auto;
+}

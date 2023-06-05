@@ -1,0 +1,55 @@
+﻿@using JewStore.Models;
+@using Microsoft.AspNetCore.Mvc;
+@model FeedbackModel;
+@{
+	TempData["user"] = Model.FbText;
+}
+    <form method="post" asp-action="AddFeedback" asp-controller="Home" class="body">
+        <div class="body">
+
+			<input type ="hidden" asp-for="OrderId" value="@Model.OrderId"/>
+			<input type="hidden" asp-for="FbMasterName" value="@Model.FbMasterName" />
+			<input type="hidden" asp-for="ClientName" value="@Model.ClientName" />
+			<input type="hidden" asp-for="FbId" value="" />
+            <div class="rating-area">
+
+                
+                <input asp-for="FbScore" class="form-check-input d-none" type="radio" id="star-5" value="5">
+                    <label for="star-5" title="Оценка «5»"></label>
+
+
+            <input asp-for="FbScore" class="form-check-input d-none" type="radio" id="star-4" value="4">
+                    <label for="star-4" title="Оценка «5»"></label>
+
+
+
+            <input asp-for="FbScore" class="form-check-input d-none" type="radio" id="star-3" value="3">
+                    <label for="star-3" title="Оценка «5»"></label>
+
+
+            <input asp-for="FbScore" class="form-check-input d-none" type="radio" id="star-2" value="2">
+                    <label for="star-2" title="Оценка «5»"></label>
+
+
+
+            <input asp-for="FbScore" class="form-check-input d-none" type="radio" id="star-1" value="1">
+                        <label for="star-1" title="Оценка «5»"></label>	
+                
+
+            </div>
+            
+
+            <textarea asp-for="FbText" placeholder="Комментарий" value="" required></textarea> <br>
+			
+        </div>
+	<button class="btn btn-primary">Оставить отзыв</button> <br>
+    </form>
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,41 @@
+﻿@using JewStore.Models;
+
+@model UserModel;
+@{
+    ViewData["Title"] = "Вход";
+}
+@if (Model.Login!=null)
+{
+    <script>
+        alert('Неверный логин и(или) пароль!');
+    </script>
+}
+    
+    <form method="post" asp-action="CheckLogin" asp-controller="Home" class="body">
+        <div class="body">
+            <h1>@ViewData["Title"]</h1>
+            <input type="hidden" asp-for="Role"/>
+            <input type="hidden" asp-for="Rating"/>
+            <input type="hidden" asp-for="UserId"/>
+            <input type="hidden" asp-for="UserName"/>
+
+
+            <input asp-for="Login" type="text" placeholder="Login" value="" required/>
+
+            <input asp-for="PasswordHash" type="password" placeholder="Password" required/>
+
+            <input type="submit" class="btn btn-primary submit-btn" value="Войти"/>
+        </div>
+
+    </form>
+    <div class="register">
+        Нет аккаунта?
+        <input type="button" class="btn btn-info" value="Зарегистрироваться" onclick="location.href='@Url.Action("RegisterPage", "Home")'" />
+    </div>
+
+
+
+
+
+
+

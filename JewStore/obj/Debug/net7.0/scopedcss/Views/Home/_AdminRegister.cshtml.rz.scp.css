@@ -1,0 +1,19 @@
+.body[b-fzaw6nfoun]{
+ 
+    display:grid;
+    grid-gap: 20px;
+    grid-template-rows: auto;
+    text-align: center;
+    margin:auto;
+    max-width:100%;
+}
+
+.submit-btn[b-fzaw6nfoun]{
+    width:100%;
+    margin: auto;
+}
+.radio[b-fzaw6nfoun]{
+    display: flex;
+    gap: 10px;
+    width: 60%;
+}

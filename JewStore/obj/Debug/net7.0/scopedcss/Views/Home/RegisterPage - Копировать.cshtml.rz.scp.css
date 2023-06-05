@@ -1,0 +1,14 @@
+.body[b-s1rctsj651]{
+ 
+    display:grid;
+    grid-gap: 20px;
+    grid-template-rows: auto;
+    text-align: center;
+    margin:auto;
+    max-width:40%;
+}
+
+.submit-btn[b-s1rctsj651]{
+    width:50%;
+    margin: auto;
+}

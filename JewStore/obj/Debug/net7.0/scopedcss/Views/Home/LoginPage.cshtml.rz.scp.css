@@ -1,0 +1,25 @@
+.body[b-3s8cwl1phf]{
+ 
+    display:grid;
+    grid-gap: 20px;
+    grid-template-rows: auto;
+    text-align: center;
+    margin:auto;
+    max-width:40%;
+}
+
+.submit-btn[b-3s8cwl1phf]{
+    width:50%;
+    margin: auto;
+}
+
+.register[b-3s8cwl1phf] {
+    margin:auto;
+    margin-top: 60px;
+    text-align:center;
+    font-size: 20px;
+    display: grid;
+    grid-gap: 20px;
+    grid-template-rows: auto;
+    width: 15%;
+}

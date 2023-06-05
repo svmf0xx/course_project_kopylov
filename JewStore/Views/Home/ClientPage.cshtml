@@ -1,0 +1,104 @@
+﻿@model UserModel;
+@{
+    ViewData["Title"] = "Client Page";
+}
+
+@Html.Hidden("RedirectTo", Url.Action("LoginPage", "Home"))
+
+<div class="body">
+
+    
+    <div class="welcome">
+        <span>Добро пожаловать в Ювелирую Мастерскую, @Model.UserName!</span>
+    </div>
+    
+    <div class="menu">
+
+        <button id="my-orders" class="btn btn-primary">Мои заказы</button>
+        
+        <div id="orders-table">
+            
+        </div>
+
+        <button class="btn btn-primary" id="make-order-btn" data-bs-toggle="modal" data-bs-target="#make-order">Сделать заказ</button>
+        <!--More window and BUTTON-->
+        <div class="modal fade make-order-modal" width="100%" id="make-order" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="staticBackdropLabel">Сделать заказ</h5>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Закрыть"></button>
+                    </div>
+
+
+                    <div class="modal-body" id="partial">
+                    </div>
+
+
+                    <script></script>
+
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Закрыть</button>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+
+
+    @section Scripts
+        {
+                <script>
+                    $('#make-order-btn').hide()
+
+
+                    var order ={OrderId: '',
+                                ClientLogin: '@(new Microsoft.AspNetCore.Html.HtmlString(Model.Login))',
+                                ClientName: '@(new Microsoft.AspNetCore.Html.HtmlString(Model.UserName))',
+                                Price: '',
+                                Material: '',
+                                Comment: '', 
+                                Gem: '', 
+                                Status: '',
+                                MastersName: '',
+                                Date: '',
+                                }
+                    $('#partial').load("/Home/_MakeOrder", order)
+                    
+
+
+
+
+                    var check = '@(new Microsoft.AspNetCore.Html.HtmlString(Model.Login))'
+                    if (check === ''){
+                         var url = $("#RedirectTo").val();
+                         location.href = url;
+                    }
+                    
+                    var model ={UserId: @Model.UserId,
+                                Login: '@(new Microsoft.AspNetCore.Html.HtmlString(Model.Login))',
+                                UserName: '@(new Microsoft.AspNetCore.Html.HtmlString(Model.UserName))',
+                                PasswordHash: '@Model.PasswordHash', 
+                                Role: '@Model.Role', 
+                                Rating: @Model.Rating, 
+                    }
+
+
+                    $('#orders-table').load("/Home/_ClientOrders", model)
+                    $('#make-order-btn').show()
+
+
+
+                    $('#my-orders').click(function(){
+                        $('#orders-table').load("/Home/_ClientOrders", model)
+                        $('#make-order-btn').show()
+                    })
+                    
+                </script>
+        }
+
+
+
+</div>

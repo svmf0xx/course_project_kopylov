@@ -1,0 +1,14 @@
+.body[b-hvj1opv59v]{
+ 
+    display:grid;
+    grid-gap: 20px;
+    grid-template-rows: auto;
+    text-align: center;
+    margin:auto;
+    max-width:40%;
+}
+
+.submit-btn[b-hvj1opv59v]{
+    width:50%;
+    margin: auto;
+}

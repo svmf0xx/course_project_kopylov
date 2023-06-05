@@ -1,0 +1,105 @@
+﻿@model UserModel;
+@{
+    ViewData["Title"] = "Admin Page";
+}
+
+@Html.Hidden("RedirectTo", Url.Action("LoginPage", "Home"))
+
+<div class="body">
+    
+    <div class="menu">
+        <div class="buttons">
+            <button class="btn btn-info" id="all-orders-button">Все заказы</button>
+            <button class="btn btn-info" id="all-users-button">Все пользователи</button>
+        </div>
+        <div id="all-orders">
+
+        </div>
+    </div>
+    
+    <div class="footer">
+        <button class="btn btn-info" data-bs-toggle="modal" data-bs-target="#register">Зарегистрировать...</button>
+
+        <div class="modal fade make-order-modal" width="100%" id="register" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="staticBackdropLabel">Зарегистрировать</h5>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Закрыть"></button>
+                    </div>
+
+
+                    <div class="modal-body" id="partial">
+                            
+                    </div>
+                    
+
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Закрыть</button>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+
+
+
+
+
+
+
+
+
+    </div>
+
+
+
+
+
+
+
+
+    @section Scripts
+        {
+        <script>
+
+
+
+            var check = '@(new Microsoft.AspNetCore.Html.HtmlString(Model.Login))'
+            if (check === '') {
+                var url = $("#RedirectTo").val();
+                location.href = url;
+            }
+
+
+            var model =
+                    {
+                                UserId: @Model.UserId,
+                                Login: '@(new Microsoft.AspNetCore.Html.HtmlString(Model.Login))',
+                                UserName: '@(new Microsoft.AspNetCore.Html.HtmlString(Model.UserName))',
+                                PasswordHash: '@Model.PasswordHash', 
+                                Role: '@Model.Role', 
+                                Rating: @Model.Rating, 
+                    }
+
+
+
+            $('#all-orders').load("/Home/_AdminOrders", model)
+            $('#partial').load("/Home/_AdminRegister", model)
+
+            $('#all-orders-button').click(function () {
+                $('#all-orders').load("/Home/_AdminOrders", model)
+            })
+
+            $('#all-users-button').click(function () {
+                $('#all-orders').load("/Home/_AdminUsers", model)
+            })
+
+        </script>
+    }
+
+
+
+</div>

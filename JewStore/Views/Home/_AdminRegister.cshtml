@@ -1,0 +1,46 @@
+﻿@using JewStore.Models;
+@model UserModel;
+
+@*@if (Model.Login!=null)
+{
+    <script>
+        alert('Логин занят!');
+    </script>
+}*@
+
+    <form method="post" asp-action="RegisterEmployee" asp-controller="Home" class="body">
+        <div class="body">
+            @{
+                TempData["admin"] = ViewBag.admin;
+            }
+
+            <div class="radio">
+              <input asp-for="Role" class="form-check-input" type="radio"  id="flexRadioDefault1" value="Master">
+              Мастера
+            </div>
+
+            <div class="radio">
+              <input asp-for="Role" class="form-check-input" type="radio"  id="flexRadioDefault2" value="Admin">
+              Администратора
+            </div>
+
+            <input type="hidden" asp-for="Rating" value="-1"/>
+            <input type="hidden" asp-for="UserId" value=""/>
+            
+            <input asp-for="UserName" type="text" placeholder="Впишите имя и фамилию..." value = "" required />
+
+            <input asp-for="Login" type="text" placeholder="...придумайте логин..." value="" required />
+
+            <input asp-for="PasswordHash" type="password" placeholder="...и пароль" value = "" required />
+
+            <input type="submit" class="btn btn-info submit-btn" value="Зарегистрировать"/>
+        </div>
+
+    </form>
+
+
+
+
+
+
+

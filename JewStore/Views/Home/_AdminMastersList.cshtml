@@ -1,0 +1,48 @@
+﻿@model List<UserModel>
+
+<div class="body">
+	@if (Model.Any() && Model[0] != null)
+	{
+		<div class="master-table">
+			<div>Имя</div>
+			<div>Рейтинг</div>
+			<div></div>
+		</div>
+		@foreach (var master in Model)
+		{
+			if (master.Role == "Master")
+			{
+				<div class="master">
+					<div>@master.UserName</div>
+					<div>@master.Rating</div>
+					<button class="btn btn-primary" onclick="location.href='@Url.Action("AcceptOrder", "Home", new {
+																																							OrderId = ViewData["OrderID"],
+																																							ClientLogin=ViewData["admin"], 
+																																							Type = "", 
+																																							Material = "",
+																																							Comment = "",
+																																							Date = "",
+																																							Gem ="",
+																																							MastersName = master.UserName,
+																																							Status = "",
+																																							Price = ""})' ">
+																																							
+																																							Назначить</button>
+
+				</div>
+
+			}
+
+
+
+
+		}
+	}
+	else
+	{
+		<div>
+			Мастеров нет...
+		</div>
+	}
+</div>
+

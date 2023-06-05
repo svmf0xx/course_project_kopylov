@@ -1,0 +1,38 @@
+﻿@using JewStore.Models;
+@model UserModel;
+
+@{
+    ViewData["Title"] = "Регистрация";
+}
+@if (Model.Login!=null)
+{
+    <script>
+        alert('Логин занят!');
+    </script>
+}
+
+    <button class="btn btn-secondary" onclick="location.href='@Url.Action("LoginPage", "Home")'">Назад</button>
+    <form method="post" asp-action="RegisterClient" asp-controller="Home" class="body">
+        <div class="body">
+            <h1>@ViewData["Title"]</h1>
+            <input type="hidden" asp-for="Role" value="Client"/>
+            <input type="hidden" asp-for="Rating" value="-1"/>
+            <input type="hidden" asp-for="UserId"/>
+
+            <input asp-for="UserName" type="text" placeholder="Впишите ваши имя и фамилию..." required />
+
+            <input asp-for="Login" type="text" placeholder="...придумайте логин..." required/>
+
+            <input asp-for="PasswordHash" type="password" placeholder="...и пароль" required />
+
+            <input type="submit" class="btn btn-info submit-btn" value="Зарегистрироваться"/>
+        </div>
+
+    </form>
+
+
+
+
+
+
+
